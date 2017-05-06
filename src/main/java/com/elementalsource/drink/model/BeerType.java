@@ -9,8 +9,18 @@ import com.google.common.base.CaseFormat;
 public enum BeerType {
 
     ALE("Ale", DrinkingStrategyAle.class),
-    LAGER("Lager", DrinkingStrategyLager.class),
+
+    LAGER("Lager", DrinkingStrategyLager.class) {
+        // you can change default resolution of name to a specific enum
+        @Override
+        protected String resolveName() {
+            return "drinkingStrategyLager";
+        }
+    },
+
     WHEAT_BEER("WheatBeer", DrinkingStrategyWheatBeer.class);
+
+    private static final String BASE_NAME = "drinkingStrategy";
 
     private final String description;
     private final Class<? extends DrinkingStrategy> drinkingStrategy;
@@ -23,7 +33,7 @@ public enum BeerType {
     }
 
     protected String resolveName() {
-        return "drinkingStrategy" + CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, name());
+        return BASE_NAME.concat(CaseFormat.UPPER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, name()));
     }
 
     public String getDescription() {
