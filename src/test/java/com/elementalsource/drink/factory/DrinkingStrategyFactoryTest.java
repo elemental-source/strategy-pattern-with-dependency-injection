@@ -8,11 +8,11 @@ public class DrinkingStrategyFactoryTest {
 
     private static final DrinkingStrategyFactoryTest INSTANCE = new DrinkingStrategyFactoryTest();
 
-    public static DrinkingStrategyFactoryTest getInstance() {
-        return INSTANCE;
+    private DrinkingStrategyFactoryTest() {
     }
 
-    private DrinkingStrategyFactoryTest() {
+    public static DrinkingStrategyFactoryTest getInstance() {
+        return INSTANCE;
     }
 
     public void shouldCreateStrategy(final DrinkingStrategyFactory factory) {

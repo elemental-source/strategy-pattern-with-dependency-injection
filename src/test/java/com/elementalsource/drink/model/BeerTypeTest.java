@@ -15,7 +15,7 @@ public class BeerTypeTest {
         final String strategyName = beerType.getStrategyName();
 
         // then
-        assertEquals("drinkingStrategyAle",strategyName);
+        assertEquals("drinkingStrategyAle", strategyName);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class BeerTypeTest {
         final String strategyName = beerType.getStrategyName();
 
         // then
-        assertEquals("drinkingStrategyLager",strategyName);
+        assertEquals("drinkingStrategyLager", strategyName);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class BeerTypeTest {
         final String strategyName = beerType.getStrategyName();
 
         // then
-        assertEquals("drinkingStrategyWheatBeer",strategyName);
+        assertEquals("drinkingStrategyWheatBeer", strategyName);
     }
 
 }
