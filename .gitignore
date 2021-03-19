@@ -1,5 +1,6 @@
 # Java #
 *.jar
+!gradle/wrapper/gradle-wrapper.jar
 *.war
 *.class
 
@@ -22,10 +23,6 @@ hs_err_pid*
 ######################
 .gradle/
 build/
-gradle/
-gradlew
-gradlew.bat
-
 out/
 
 
